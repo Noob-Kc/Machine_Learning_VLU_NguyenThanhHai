@@ -1,0 +1,15 @@
+import pandas as pd
+df = pd.read_csv("bai01_hoi_quy/data/gia_nha.csv")
+print("Kich thuoc bang (so dong, so cot):", df.shape)
+print()
+print("Nam dong dau tien:")
+print(df.head())
+print()
+
+print("Ten cac cot:", list(df.columns))
+print()
+print("Thong ke nhanh cot dien_tich va cot gia:")
+print(df[["dien_tich", "gia"]].describe().round(2))
+print()
+print("So o bi thieu trong tung cot:")
+print(df.isna().sum())
